@@ -712,7 +712,140 @@
             cursor: pointer;
         }
 
+/* =========================================
+   CURRENTLY LEARNING
+========================================= */
 
+#learning {
+    padding: 90px 0;
+}
+
+
+/* Learning Grid */
+
+.learning-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Learning Card */
+
+.learning-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.025)
+        );
+
+    transition: 0.35s ease;
+
+    overflow: hidden;
+}
+
+
+.learning-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #06b6d4;
+
+    box-shadow:
+        0 15px 35px rgba(6,182,212,0.15);
+}
+
+
+/* Icon */
+
+.learning-icon {
+
+    min-width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 23px;
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+
+/* Title */
+
+.learning-card h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+}
+
+
+/* Description */
+
+.learning-card p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    opacity: 0.65;
+}
+
+
+/* Status */
+
+.learning-status {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    color: #c084fc;
+
+    border: 1px solid #c084fc;
+
+    background:
+        rgba(192,132,252,0.08);
+}
         /* =====================================================
            PROFILE CARD
         ===================================================== */
@@ -1007,7 +1140,130 @@
 
             color: var(--text-light);
         }
+/* =========================================
+   CODING PROFILES
+========================================= */
 
+#profiles {
+    padding: 90px 0;
+}
+
+#profiles > .container > p,
+#learning > .container > p {
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+#profiles h2,
+#learning h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+
+/* Profiles Grid */
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Profile Card */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: rgba(255,255,255,0.04);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.35s ease;
+}
+
+
+.profile-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 15px 35px rgba(124,58,237,0.2);
+}
+
+
+/* Icon */
+
+.profile-icon {
+    min-width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+
+    background: rgba(139,92,246,0.12);
+}
+
+
+/* Text */
+
+.profile-card h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+.profile-card p {
+    margin: 0;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+}
+
+
+/* Arrow */
+
+.profile-card > span {
+    margin-left: auto;
+
+    font-size: 22px;
+
+    opacity: 0.5;
+
+    transition: 0.3s;
+}
+
+.profile-card:hover > span {
+    opacity: 1;
+
+    transform: translate(4px,-4px);
+}
 
         /* =====================================================
            EDUCATION
@@ -1404,7 +1660,290 @@
             cursor: pointer;
 
         }
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
 
+#achievements {
+    padding: 100px 0;
+    position: relative;
+}
+
+
+/* Subtitle */
+
+#achievements > .container > p {
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+
+/* Main Heading */
+
+#achievements h2 {
+    font-size: 55px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    letter-spacing: -2px;
+
+    background: linear-gradient(
+        90deg,
+        #f59e0b,
+        #ef4444,
+        #8b5cf6
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   ACHIEVEMENT GRID
+========================================= */
+
+.achievements-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   ACHIEVEMENT CARD
+========================================= */
+
+.achievement-card {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 22px;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.07),
+            rgba(255,255,255,0.025)
+        );
+
+    border: 1px solid
+        rgba(255,255,255,0.12);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Left glowing line */
+
+.achievement-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f59e0b,
+            #ef4444,
+            #8b5cf6
+        );
+}
+
+
+/* Hover */
+
+.achievement-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(245,158,11,0.5);
+
+    box-shadow:
+        0 18px 40px
+        rgba(245,158,11,0.12);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.achievement-icon {
+
+    min-width: 55px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 26px;
+
+    background:
+        rgba(245,158,11,0.12);
+
+    border: 1px solid
+        rgba(245,158,11,0.2);
+
+    transition: 0.35s ease;
+}
+
+
+/* Icon hover */
+
+.achievement-card:hover
+.achievement-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.1);
+
+    background:
+        rgba(245,158,11,0.2);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.achievement-content {
+    flex: 1;
+}
+
+
+/* Number */
+
+.achievement-number {
+
+    display: inline-block;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #f59e0b;
+
+    margin-bottom: 6px;
+}
+
+
+/* Title */
+
+.achievement-content h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* Description */
+
+.achievement-content p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .achievements-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    #achievements {
+
+        padding: 70px 20px;
+
+    }
+
+    #achievements h2 {
+
+        font-size: 40px;
+
+        margin-bottom: 35px;
+
+    }
+
+    .achievement-card {
+
+        padding: 22px;
+
+        gap: 15px;
+
+    }
+
+    .achievement-icon {
+
+        min-width: 45px;
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+
+    }
+
+    .achievement-content h3 {
+
+        font-size: 17px;
+
+    }
+
+}
 
         /* =====================================================
            CERTIFICATES
@@ -2764,6 +3303,342 @@
 
 
 
+<!-- ================= CURRENTLY LEARNING ================= -->
+
+<section id="learning">
+
+    <div class="container">
+
+        <p>— improving every day</p>
+
+        <h2>Currently Learning</h2>
+
+
+        <div class="learning-grid">
+
+            <!-- React -->
+            <div class="learning-card">
+
+                <div class="learning-icon">
+                    ⚛️
+                </div>
+
+                <div>
+
+                    <h3>React</h3>
+
+                    <p>
+                        Building interactive and responsive
+                        frontend applications.
+                    </p>
+
+                </div>
+
+                <span class="learning-status">
+                    LEARNING
+                </span>
+
+            </div>
+
+
+            <!-- Node.js -->
+            <div class="learning-card">
+
+                <div class="learning-icon">
+                    🟢
+                </div>
+
+                <div>
+
+                    <h3>Node.js</h3>
+
+                    <p>
+                        Learning backend development,
+                        APIs and server-side JavaScript.
+                    </p>
+
+                </div>
+
+                <span class="learning-status">
+                    LEARNING
+                </span>
+
+            </div>
+
+
+            <!-- REST API -->
+            <div class="learning-card">
+
+                <div class="learning-icon">
+                    🔗
+                </div>
+
+                <div>
+
+                    <h3>REST APIs</h3>
+
+                    <p>
+                        Understanding API development,
+                        requests and responses.
+                    </p>
+
+                </div>
+
+                <span class="learning-status">
+                    LEARNING
+                </span>
+
+            </div>
+
+
+            <!-- DSA -->
+            <div class="learning-card">
+
+                <div class="learning-icon">
+                    🧠
+                </div>
+
+                <div>
+
+                    <h3>Data Structures &amp; Algorithms</h3>
+
+                    <p>
+                        Improving problem solving and
+                        competitive programming skills.
+                    </p>
+
+                </div>
+
+                <span class="learning-status">
+                    LEARNING
+                </span>
+
+            </div>
+
+<!-- Flutter -->
+<div class="learning-card">
+
+    <div class="learning-icon">
+        🦋
+    </div>
+
+    <div>
+
+        <h3>Flutter</h3>
+
+        <p>
+            Learning cross-platform mobile app
+            development with Flutter and Dart.
+        </p>
+
+    </div>
+
+    <span class="learning-status">
+        LEARNING
+    </span>
+
+</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CODING PROFILES ================= -->
+
+<section id="profiles">
+
+    <div class="container">
+
+        <p>— find me online</p>
+
+        <h2>Coding Profiles</h2>
+
+        <div class="profiles-grid">
+
+            <!-- GitHub -->
+            <a href="https://github.com/yaswanthkosuri"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+
+                <div>
+                    <h3>GitHub</h3>
+                    <p>Projects, source code &amp; repositories</p>
+                </div>
+
+                <span>↗</span>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/yaswanth-varma-0915693a9"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>Professional profile &amp; connections</p>
+                </div>
+
+                <span>↗</span>
+
+            </a>
+
+
+            <!-- CodeChef -->
+            <a href="https://www.codechef.com/users/yaswanth_260"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <strong>CC</strong>
+                </div>
+
+                <div>
+                    <h3>CodeChef</h3>
+                    <p>Competitive programming &amp; problem solving</p>
+                </div>
+
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+
+    <div class="container">
+
+        <p>— milestones &amp; accomplishments</p>
+
+        <h2>Achievements</h2>
+
+
+        <div class="achievements-grid">
+
+
+            <!-- Achievement 1 -->
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    🏆
+                </div>
+
+                <div class="achievement-content">
+
+                    <span class="achievement-number">
+                        01
+                    </span>
+
+                    <h3>Coding &amp; Problem Solving</h3>
+
+                    <p>
+                        I have solved 400+ coding problems on CodeChef and participated in 5+ CodeChef contests and
+                        improving problem-solving skills through
+                        coding challenges.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Achievement 2 -->
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    💻
+                </div>
+
+                <div class="achievement-content">
+
+                    <span class="achievement-number">
+                        02
+                    </span>
+
+                    <h3>Web Development Projects</h3>
+
+                    <p>
+                        Built responsive web projects using
+                        HTML, CSS, JavaScript and modern
+                        development technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Achievement 3 -->
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    🎓
+                </div>
+
+                <div class="achievement-content">
+
+                    <span class="achievement-number">
+                        03
+                    </span>
+
+                    <h3>Technical Learning</h3>
+
+                    <p>
+                        Continuously developing skills in programming, databases, backend development, and modern software technologies by working with tools and technologies such as Git, GitHub, VS Code, MySQL, XAMPP, React, Node.js, Django, and REST APIs, while gaining hands-on experience through practical projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Achievement 4 -->
+            <div class="achievement-card">
+
+                <div class="achievement-icon">
+                    🚀
+                </div>
+
+                <div class="achievement-content">
+
+                    <span class="achievement-number">
+                        04
+                    </span>
+
+                    <h3>Personal Projects</h3>
+
+                    <p>
+                        Created practical projects to apply
+                        programming concepts and gain
+                        hands-on development experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 <!-- =====================================================
      PROJECTS
 ===================================================== -->
@@ -3309,14 +4184,12 @@
                 <i class="fab fa-linkedin-in"></i>
 
             </a>
-
-
-             </a>
-
-                        <a href="https://www.codechef.com/users/yaswanth_260"target="_blank"title="CodeChef">
+<a href="https://www.codechef.com/users/yaswanth_260"target="_blank"title="CodeChef">
 
                             <strong>CC</strong>
 </a>
+
+            
 
         </div>
 
